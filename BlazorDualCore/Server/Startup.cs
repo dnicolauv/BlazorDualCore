@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Components.Server;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -32,7 +33,10 @@ namespace BlazorDualCore.Server
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
-        {            
+        {
+            services.AddScoped<AuthenticationStateProvider, ServerAuthenticationStateProvider>();
+            services.AddScoped<SignOutSessionStateManager>();
+
             services.AddResponseCompression(opts =>
             {
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
@@ -52,6 +56,8 @@ namespace BlazorDualCore.Server
             services.AddIdentityServer().AddApiAuthorization<ApplicationUser, ApplicationDbContext>();
 
             services.AddAuthentication().AddIdentityServerJwt();
+
+            services.AddIdentityCore<IdentityUser>().AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddControllersWithViews();
             services.AddRazorPages();           
@@ -74,8 +80,9 @@ namespace BlazorDualCore.Server
             services.AddScoped<ClientLoader>();
             services.AddScoped<IClientLoaderConfiguration, ClientLoaderConfiguration>();
 
-            services.AddScoped<AuthenticationStateProvider, ServerAuthenticationStateProvider>();
-            services.AddScoped<SignOutSessionStateManager>();
+          
+
+            services.AddScoped<BlazorDualCore.Shared.Data.WeatherForecastService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

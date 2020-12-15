@@ -1,0 +1,61 @@
+﻿@using System.Runtime.InteropServices;
+
+<div class="ml-3 relative" @onmouseover="ShowMenu">
+    <div>
+        <button class="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu" aria-haspopup="true">
+            <span class="sr-only">Open user menu</span>
+            <AuthorizeView>
+                <Authorized>
+                    <NavLink href="@(isWasm ? "authentication/manage" : "Identity/Account/Manage")">
+                        <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                    </NavLink>
+                </Authorized>
+                <NotAuthorized>
+                    <NavLink href="@(@isWasm ? "authentication/login" : "Identity/Account/Login")">
+                        <img class="h-8 w-8 rounded-full" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAMFBMVEXFxcX////CwsLGxsb7+/vT09PJycn19fXq6urb29ve3t7w8PDOzs7n5+f5+fnt7e30nlkBAAAFHUlEQVR4nO2dC5qqMAyFMTwUBdz/bq+VYYrKKJCkOfXmXwHna5uTpA+KwnEcx3Ecx3Ecx3Ecx3Ecx3Ecx3Ecx3Ecx3EcA2iO9cdIc5PUdO257y+BU39u66b4HplE3fk6VIcnqmNfl1+gksr6+iIucjl3WYukor7+re6Hoe1y1UhNO3zUd+fUFRmKpOa0Tt6dY5ubRCrOG/QFLk1WGmnt/JxzykcjdZ/jyxJDLlOV2l36AtcsJJb9boG3YcR3DuqODIE3ztYKPkDdmwRmpUToUaSaq++AvRgZMWbOpbQW8hdCAm8ZDugoikzREdCJ2okJPBx6azFLNOwoOgcxojJ98JkaTSJxMpklKrCAKhZGI0drTY/wU5lXoJYibannV9NYy4oozNEAkPHTjop+DTDxVGkIgYJNoyQQJtiIW+EMjGAjm649AjGIaqswcEFQKJ2QPlJbqytki6ZXAAZRJ52J2McaUowzAfs+uFzrYhnzaapphiPWdaJWShqxjqa6kTTQ205TVbsfMa6htL0iYOsXpJrQjHSmCkv1QGPtiHqlYcQ21Gj7fcDU8xOEUuNgSltPzexh+HqFlanCBHZ4OLhCV+gK/3OF6vWvucLv98MUOY2pwu/PS/+D2qJU7pYGbOvDFDW+bbON9p3o3oRxn0bfLgZTgSn6pSfrtr56qLHemtHPTK2319SzGvtjQ9qeb39WgS66Cm073nd0U1PzDdJCO3Gzn6TKpl9Zq7ujGWsQhlA3NwWIMwG9zM08Y/tBrR9VWeczv5CSQuuUNKIUTk23ZJ5RKfVhjnkXotfWIlgX2BSCDYbZR+QTcLhb3dKZDUY2M0d4KWItwhHRah/zsrOgKw4wycwjcgEVcgQDQo23CqSiWEJkFAfod2oE1uIFdA1OsCPqFXYNTjCfb8Ez+iX2x5sKLlVbhtqdDcar9ZevhnbZxoBUD35k23t0d304LYs1ELVbnfFaZ/REJJX9niP8Q19moZGo3m8XR/yBvOnjFfsXcI2c8ZuNo7WMP5HQh6yRGrlmFOJTnyTcT+zRlqPUBI2gTVWNUzUna1ERgecgF4GpNBQ38jGqxVLzQA1A31Rrhk6Yz9QEh/WND0GnuG9huhiTXJkxfAizTHLr6cbJKN6UCU6x/2DTRE1xEeEXi3O0ZUqBN4nJRzHhFB1JPlFTBZlI2kQ8zc3KJ1Le8DIRmFJiknuVS6RK4Ej/JtBfJErDSzOBiY4wJHX6Z1I4v1GUmdCPNirnLLeg3oJLcbX5PcpHNbRvOa1A956QmRPOUXVF+zkaUJynpkYR0bOMJH2nNej1pqyV/aKkz9jr5yj5vrXXz1F5SQLACiMapmierj2ikLyleKdlA/I/2oFxiglxx9B+mHwz0lf34IZQfhDRhlD6bhvgEAoPYooHkTczSIZTLC+cEExsoNKZiGBiY9cCfo/Y/SjIOBMQizWWTe73CMUasJx7jlD+DdKdWUKoY4PRYFtGpO0G1Lx4RaadgTtJhf4fiGqGIwKWCGuGIwKWqP+7IxYCzygjR9IAO5pC7Da9g70TBVpWRNgFBlgT8RV2WxHbKwJMv4BOaEaYaU2K16yZMN/qgV+G7IWIvwyZCxHeDQMsR8wg0DBDDXB5H2EV+hkEGmaoySHQsEJNFoGGFWrAq98JRhUMX1iMMMqLLEIpK5jCbd4vw9nSt/72lewXiN6jmdjfq8Hdknlk92ZwJnbIMMRM7JBhiFlUFoHd1UWaP1QKsPsHA5mkNB+Smn9JqV3wskatnQAAAABJRU5ErkJggg==" alt="" />
+                    </NavLink>
+                </NotAuthorized>
+            </AuthorizeView>
+        </button>
+    </div>
+    <!--
+        Profile dropdown panel, show/hide based on dropdown state.
+
+        Entering: "transition ease-out duration-100"
+        From: "transform opacity-0 scale-95"
+        To: "transform opacity-100 scale-100"
+        Leaving: "transition ease-in duration-75"
+        From: "transform opacity-100 scale-100"
+        To: "transform opacity-0 scale-95"
+    -->
+    <div @onmouseout="HideMenu" style="@NavMenuCssStyle" class="z-10 transition-opacity ease-in-out duration-100 opacity-0 origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
+        <AuthorizeView>
+            <NotAuthorized>
+                <NavLink href="@(isWasm ? "authentication/login": "Identity/Account/Login")" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign In</NavLink>
+                <NavLink href="@(isWasm ? "authentication/register" : "Identity/Account/Register")" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Register</NavLink>
+            </NotAuthorized>
+            <Authorized>
+                <NavLink href="@(isWasm ? "authentication/manage" : "Identity/Account/Manage")" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</NavLink>
+                <NavLink href="@(isWasm ? "authentication/logout" : "Identity/Account/Logout")" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</NavLink>
+            </Authorized>
+        </AuthorizeView>
+    </div>
+</div>
+
+
+@code {
+
+    bool isWasm = RuntimeInformation.IsOSPlatform(OSPlatform.Create("BROWSER"));
+
+    private string NavMenuCssStyle = "opacity: 0";
+
+    private async Task ShowMenu()
+    {
+        NavMenuCssStyle = "opacity: 100";
+    }
+
+    private async Task HideMenu()
+    {
+        NavMenuCssStyle = "opacity: 0";
+    }
+}

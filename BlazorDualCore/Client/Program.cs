@@ -18,6 +18,8 @@ namespace BlazorDualCore.Client
             //Configure wasm client loader
             services.AddScoped<ClientLoader>();
             services.AddScoped<IClientLoaderConfiguration, ClientLoaderConfiguration>();
+
+            services.AddScoped<BlazorDualCore.Shared.Data.WeatherForecastService>();
         }
 
         public static async Task Main(string[] args)
