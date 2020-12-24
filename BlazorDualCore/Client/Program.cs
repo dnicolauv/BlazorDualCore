@@ -20,6 +20,10 @@ namespace BlazorDualCore.Client
             services.AddScoped<IClientLoaderConfiguration, ClientLoaderConfiguration>();
 
             services.AddScoped<BlazorDualCore.Shared.Data.WeatherForecastService>();
+
+            services.AddScoped<BlazorDualCore.Shared.Data.EmployeeService>();
+            services.AddScoped<BlazorDualCore.Shared.Data.EmployerService>();
+            services.AddScoped<BlazorDualCore.Shared.Data.JobService>();
         }
 
         public static async Task Main(string[] args)

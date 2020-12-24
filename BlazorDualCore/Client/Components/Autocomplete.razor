@@ -55,7 +55,7 @@
         if (value?.Length >= 3)
         {
             var _httpClient = _httpClientFactory.CreateClient("BlazorDualCore.API");
-            this.Items = await _httpClient.GetFromJsonAsync<List<TItem>>(ApiEndpoint);
+            this.Items = await _httpClient.GetFromJsonAsync<List<TItem>>(ApiEndpoint + "?search=" + value);
         }
         else if (value?.Length < 3)
         {

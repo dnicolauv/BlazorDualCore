@@ -85,9 +85,11 @@ namespace BlazorDualCore.Server
             services.AddScoped<ClientLoader>();
             services.AddScoped<IClientLoaderConfiguration, ClientLoaderConfiguration>();
 
-          
 
-            services.AddScoped<BlazorDualCore.Shared.Data.WeatherForecastService>();
+            services.AddScoped<Shared.Data.EmployeeService>();
+            services.AddScoped<Shared.Data.EmployerService>();
+            services.AddScoped<Shared.Data.JobService>();
+            services.AddScoped<Shared.Data.WeatherForecastService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

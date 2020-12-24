@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BlazorDualCore.Shared.Data
+﻿namespace BlazorDualCore.Shared.Data
 {
     public class Employee : Person
     {

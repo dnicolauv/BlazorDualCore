@@ -13,17 +13,18 @@ namespace BlazorDualCore.Server.Controllers
     public class EmployeeController : ControllerBase
     {        
         private readonly ILogger<EmployeeController> _logger;
+        private readonly EmployeeService _employeeService;
 
-        public EmployeeController(ILogger<EmployeeController> logger)
+        public EmployeeController(ILogger<EmployeeController> logger, EmployeeService employeeService)
         {
             _logger = logger;
+            _employeeService = employeeService;
         }
 
         [HttpGet]
         public IEnumerable<Employee> Get(string search = null)
         {
-            EmployeeService employeeService = new EmployeeService();
-            return employeeService.Get(search);
+            return _employeeService.Get(search);
         }
     }
 }
