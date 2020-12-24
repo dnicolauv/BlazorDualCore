@@ -1,4 +1,6 @@
-﻿<div class="w-full space-y-2 sm:space-y-0 sm:flex sm:space-x-2 sm:justify-start">
+﻿@using BlazorDualCore.Shared.Data
+
+<div class="w-full space-y-2 sm:space-y-0 sm:flex sm:space-x-2 sm:justify-start">
     <div class="relative rounded-md shadow-sm">
         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <span class="text-gray-500 sm:text-sm">
@@ -7,7 +9,12 @@
                 </svg>
             </span>
         </div>
-        <input type="text" name="search" id="search" class="bg-gray-100 bg-opacity-50 block border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 pl-10 pr-12 rounded-md w-full" placeholder="Job description" />
+        @*<input type="text" name="search" id="search" class="bg-gray-100 bg-opacity-50 block border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 pl-10 pr-12 rounded-md w-full" placeholder="Job description" />*@
+        <Autocomplete ApiEndpoint="api/Employee" TItem="Employee" InputClass="bg-gray-100 bg-opacity-50 block border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 pl-10 pr-12 rounded-md w-full" Placeholder="Job Description">
+            <ItemTemplate Context="employee">
+                <AutocompleteAvatarTemplate ItemClicked="ItemClicked" ImageUrl="@employee.AvatarUrl" Key="@employee.Email" Name="@employee.Name" />
+            </ItemTemplate>
+        </Autocomplete>
     </div>
 
     <div class="relative rounded-md shadow-sm">
@@ -19,7 +26,12 @@
                 </svg>
             </span>
         </div>
-        <input type="text" name="search" id="search" class="bg-gray-100 bg-opacity-50 block border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 pl-10 pr-12 rounded-md w-full" placeholder="Location" />
+        @*<input type="text" name="search" id="search" class="bg-gray-100 bg-opacity-50 block border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 pl-10 pr-12 rounded-md w-full" placeholder="Location" />*@
+        <Autocomplete ApiEndpoint="api/Employee" TItem="Employee" InputClass="bg-gray-100 bg-opacity-50 block border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 pl-10 pr-12 rounded-md w-full" Placeholder="Job Description">
+            <ItemTemplate Context="employee">
+                <AutocompleteAvatarTemplate ItemClicked="ItemClicked" ImageUrl="@employee.AvatarUrl" Key="@employee.Email" Name="@employee.Name" />
+            </ItemTemplate>
+        </Autocomplete>
     </div>
 
     <button type="submit" class="z-20 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
@@ -27,5 +39,8 @@
     </button>
 </div>
 @code {
+    private void ItemClicked()
+    {
 
+    }
 }

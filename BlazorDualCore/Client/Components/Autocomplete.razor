@@ -1,0 +1,65 @@
+﻿@typeparam TItem
+@inject IHttpClientFactory _httpClientFactory 
+
+<input type="text" value="@value" class="@InputClass"
+       placeholder="@Placeholder" @oninput="@(async (i) => { await ValueChanged((string)i.Value);})" 
+       @onkeypress="KeyPressed" @onblur="Reset" />
+
+@if (Items.Any())
+{
+    <ul class="absolute w-full rounded-md bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+        @foreach (var item in Items)
+        {
+            @ItemTemplate(item)           
+        }
+    </ul>
+}
+
+@code {
+
+    [Parameter]
+    public string ApiEndpoint { get; set; }
+
+    [Parameter]
+    public List<TItem> Items { get; set; } = new List<TItem>();
+
+    [Parameter]
+    public RenderFragment<TItem> ItemTemplate { get; set; }
+
+    [Parameter]
+    public string InputClass { get; set; }
+
+    [Parameter]
+    public string Placeholder { get; set; }
+
+    private string value { get; set; }
+
+    //private void ItemClick(TItem item)
+    //{
+    //    Console.WriteLine("Clicked: " + item.Name);
+    //    value = item.Name;
+    //}
+
+    private void KeyPressed(KeyboardEventArgs args)
+    {
+    }
+
+
+    private void Reset()
+    {
+        this.Items.Clear();
+    }
+
+    private async Task ValueChanged(string value)
+    {
+        if (value?.Length >= 3)
+        {
+            var _httpClient = _httpClientFactory.CreateClient("BlazorDualCore.API");
+            this.Items = await _httpClient.GetFromJsonAsync<List<TItem>>(ApiEndpoint);
+        }
+        else if (value?.Length < 3)
+        {
+            this.Items.Clear();
+        }
+    }
+}

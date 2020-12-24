@@ -30,8 +30,9 @@ namespace BlazorDualCore.Client
             // Supply HttpClient instances that include access tokens when making requests to the server project            
             builder.Services.AddHttpClient("BlazorDualCore.ServerAPI", client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress))
                 .AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
-            builder.Services.AddHttpClient("BlazorDualCore.ServerAPI", client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress));
+            builder.Services.AddHttpClient("BlazorDualCore.API", client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress));
             builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("BlazorDualCore.ServerAPI"));
+            builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("BlazorDualCore.API"));
             ConfigureServices(builder.Services);
 
             builder.Services.AddApiAuthorization();

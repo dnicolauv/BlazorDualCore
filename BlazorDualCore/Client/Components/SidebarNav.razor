@@ -1,0 +1,28 @@
+﻿<div class="max-w-7xl mx-auto">
+    <!-- Replace with your content -->
+    <div class="px-4 py-6 sm:px-0">
+        <div class="flex flex-row flex-wrap justify-between space-y-4 space-x-0 lg:space-y-0 lg:space-x-4">
+
+            <div class="flex flex-col space-y-4 w-full lg:w-1/4">
+
+                @LeftSidebarContent
+
+            </div>
+
+            <div class="flex flex-col space-y-2 flex-grow">
+
+                @MainContent
+
+            </div>
+        </div>
+        <!-- /End replace -->
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment LeftSidebarContent { get; set; }
+
+    [Parameter]
+    public RenderFragment MainContent { get; set; }
+}
