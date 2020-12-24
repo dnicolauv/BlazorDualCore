@@ -60,7 +60,7 @@ namespace BlazorDualCore.Server
             services.AddIdentityCore<IdentityUser>().AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddControllersWithViews();
-            services.AddRazorPages();           
+            services.AddRazorPages();
 
             // Server Side Blazor doesn't register HttpClient by default
             if (!services.Any(x => x.ServiceType == typeof(HttpClient)))
@@ -76,6 +76,11 @@ namespace BlazorDualCore.Server
                     };
                 });
             }
+            //services.AddHttpClient("BlazorDualCore.ServerAPI", client => client.BaseAddress = new Uri("https://localhost:5001"))
+            //    .AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
+            //services.AddHttpClient("BlazorDualCore.API", client => client.BaseAddress = new Uri("https://localhost:5001"));
+            //services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("BlazorDualCore.ServerAPI"));
+            //services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("BlazorDualCore.API"));
 
             services.AddScoped<ClientLoader>();
             services.AddScoped<IClientLoaderConfiguration, ClientLoaderConfiguration>();
