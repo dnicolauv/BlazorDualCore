@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorDualCore.Server", "BlazorDualCore\Server\BlazorDualCore.Server.csproj", "{92BBCD32-8AA2-4321-9193-5381347165A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorDualCore.Server", "BlazorDualCore\Server\BlazorDualCore.Server.csproj", "{92BBCD32-8AA2-4321-9193-5381347165A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorDualCore.Client", "BlazorDualCore\Client\BlazorDualCore.Client.csproj", "{80448FA0-E40F-4C75-90E3-1C68EFB5BDD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorDualCore.Client", "BlazorDualCore\Client\BlazorDualCore.Client.csproj", "{80448FA0-E40F-4C75-90E3-1C68EFB5BDD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorDualCore.Shared", "BlazorDualCore\Shared\BlazorDualCore.Shared.csproj", "{B634B324-9145-4B28-9AF4-819690B3CB6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorDualCore.Shared", "BlazorDualCore\Shared\BlazorDualCore.Shared.csproj", "{B634B324-9145-4B28-9AF4-819690B3CB6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
