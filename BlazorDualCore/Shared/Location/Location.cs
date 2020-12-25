@@ -1,7 +1,6 @@
 ﻿namespace BlazorDualCore.Shared
 {
-    public class Location
+    public class Location : Base
     {
-        public string Name { get; set; }
     }
 }

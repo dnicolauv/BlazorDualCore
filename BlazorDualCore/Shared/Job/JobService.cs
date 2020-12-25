@@ -19,6 +19,7 @@ namespace BlazorDualCore.Shared.Data
             {
                 new Job()
                 {
+                    Id = Guid.NewGuid(),
                     Employer = this._employerService.GetByName("Mix Digital Entertainment"),
                     Name = "Need charted accountant for Bank",
                     Description = "Far much that one rank beheld bluebird after outside ignobly allegedly more when oh arrogantly vehement irresistibly fussy penguin insect additionally wow absolutely crud meretriciously hastily dalmatian a glowered inset one echidna cassowary some parrot and much as goodness some froze the sullen much connected bat wonderfully on instantaneously eel valiantly petted this along across highhandedly much dog out the much alas evasively neutral lazy reset. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque augue dignissim venenatis, turpis vestibulum lacinia dignissim venenatis.Mus arcu euismod ad hac dui, vivamus platea netus.Neque per nisl posuere sagittis, id platea dui.A enim magnis dapibus, nullam odio porta, nisl class.Turpis leo pellentesque per nam, nostra fringilla id.",
@@ -31,6 +32,7 @@ namespace BlazorDualCore.Shared.Data
                 },
                 new Job()
                 {
+                    Id = Guid.NewGuid(),
                     Employer = this._employerService.GetByName("Ebiquity Maxi"),
                     Name = "Marketing Expert For Charity Organization",
                     Description = "Far much that one rank beheld bluebird after outside ignobly allegedly more when oh arrogantly vehement irresistibly fussy penguin insect additionally wow absolutely crud meretriciously hastily dalmatian a glowered inset one echidna cassowary some parrot and much as goodness some froze the sullen much connected bat wonderfully on instantaneously eel valiantly petted this along across highhandedly much dog out the much alas evasively neutral lazy reset. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque augue dignissim venenatis, turpis vestibulum lacinia dignissim venenatis.Mus arcu euismod ad hac dui, vivamus platea netus.Neque per nisl posuere sagittis, id platea dui.A enim magnis dapibus, nullam odio porta, nisl class.Turpis leo pellentesque per nam, nostra fringilla id.",
@@ -43,6 +45,7 @@ namespace BlazorDualCore.Shared.Data
                 },
                 new Job()
                 {
+                    Id = Guid.NewGuid(),
                     Employer = this._employerService.GetByName("Reliable Movers"),
                     Name = "Print Media Designer Required",
                     Description = "Far much that one rank beheld bluebird after outside ignobly allegedly more when oh arrogantly vehement irresistibly fussy penguin insect additionally wow absolutely crud meretriciously hastily dalmatian a glowered inset one echidna cassowary some parrot and much as goodness some froze the sullen much connected bat wonderfully on instantaneously eel valiantly petted this along across highhandedly much dog out the much alas evasively neutral lazy reset. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque augue dignissim venenatis, turpis vestibulum lacinia dignissim venenatis.Mus arcu euismod ad hac dui, vivamus platea netus.Neque per nisl posuere sagittis, id platea dui.A enim magnis dapibus, nullam odio porta, nisl class.Turpis leo pellentesque per nam, nostra fringilla id.",
@@ -55,6 +58,7 @@ namespace BlazorDualCore.Shared.Data
                 },
                 new Job()
                 {
+                    Id = Guid.NewGuid(),
                     Employer = this._employerService.GetByName("Lasmoix Ltd"),
                     Name = "Medical Professed Required MBBS Part",
                     Description = "Far much that one rank beheld bluebird after outside ignobly allegedly more when oh arrogantly vehement irresistibly fussy penguin insect additionally wow absolutely crud meretriciously hastily dalmatian a glowered inset one echidna cassowary some parrot and much as goodness some froze the sullen much connected bat wonderfully on instantaneously eel valiantly petted this along across highhandedly much dog out the much alas evasively neutral lazy reset. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque augue dignissim venenatis, turpis vestibulum lacinia dignissim venenatis.Mus arcu euismod ad hac dui, vivamus platea netus.Neque per nisl posuere sagittis, id platea dui.A enim magnis dapibus, nullam odio porta, nisl class.Turpis leo pellentesque per nam, nostra fringilla id.",
@@ -67,6 +71,7 @@ namespace BlazorDualCore.Shared.Data
                 },
                 new Job()
                 {
+                    Id = Guid.NewGuid(),
                     Employer = this._employerService.GetByName("Ladbrokesed Limited"),
                     Name = "Cashier For Bank Desk Urgent Required",
                     Description = "Far much that one rank beheld bluebird after outside ignobly allegedly more when oh arrogantly vehement irresistibly fussy penguin insect additionally wow absolutely crud meretriciously hastily dalmatian a glowered inset one echidna cassowary some parrot and much as goodness some froze the sullen much connected bat wonderfully on instantaneously eel valiantly petted this along across highhandedly much dog out the much alas evasively neutral lazy reset. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque augue dignissim venenatis, turpis vestibulum lacinia dignissim venenatis.Mus arcu euismod ad hac dui, vivamus platea netus.Neque per nisl posuere sagittis, id platea dui.A enim magnis dapibus, nullam odio porta, nisl class.Turpis leo pellentesque per nam, nostra fringilla id.",
@@ -79,6 +84,7 @@ namespace BlazorDualCore.Shared.Data
                 },
                 new Job()
                 {
+                    Id = Guid.NewGuid(),
                     Employer = this._employerService.GetByName("Kellermite Group"),
                     Name = "Bank Manger For Uk Bank",
                     Description = "Far much that one rank beheld bluebird after outside ignobly allegedly more when oh arrogantly vehement irresistibly fussy penguin insect additionally wow absolutely crud meretriciously hastily dalmatian a glowered inset one echidna cassowary some parrot and much as goodness some froze the sullen much connected bat wonderfully on instantaneously eel valiantly petted this along across highhandedly much dog out the much alas evasively neutral lazy reset. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque augue dignissim venenatis, turpis vestibulum lacinia dignissim venenatis.Mus arcu euismod ad hac dui, vivamus platea netus.Neque per nisl posuere sagittis, id platea dui.A enim magnis dapibus, nullam odio porta, nisl class.Turpis leo pellentesque per nam, nostra fringilla id.",
@@ -92,6 +98,7 @@ namespace BlazorDualCore.Shared.Data
 
                 new Job()
                 {
+                    Id = Guid.NewGuid(),
                     Employer = this._employerService.GetByName("Schrodersty Property"),
                     Name = "Charity Organization agent Required",
                     Description = "Far much that one rank beheld bluebird after outside ignobly allegedly more when oh arrogantly vehement irresistibly fussy penguin insect additionally wow absolutely crud meretriciously hastily dalmatian a glowered inset one echidna cassowary some parrot and much as goodness some froze the sullen much connected bat wonderfully on instantaneously eel valiantly petted this along across highhandedly much dog out the much alas evasively neutral lazy reset. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque augue dignissim venenatis, turpis vestibulum lacinia dignissim venenatis.Mus arcu euismod ad hac dui, vivamus platea netus.Neque per nisl posuere sagittis, id platea dui.A enim magnis dapibus, nullam odio porta, nisl class.Turpis leo pellentesque per nam, nostra fringilla id.",
@@ -104,6 +111,7 @@ namespace BlazorDualCore.Shared.Data
                 },
                 new Job()
                 {
+                    Id = Guid.NewGuid(),
                     Employer = this._employerService.GetByName("Reliable Movers"),
                     Name = "Donation Collector For Charity Office",
                     Description = "Far much that one rank beheld bluebird after outside ignobly allegedly more when oh arrogantly vehement irresistibly fussy penguin insect additionally wow absolutely crud meretriciously hastily dalmatian a glowered inset one echidna cassowary some parrot and much as goodness some froze the sullen much connected bat wonderfully on instantaneously eel valiantly petted this along across highhandedly much dog out the much alas evasively neutral lazy reset. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque augue dignissim venenatis, turpis vestibulum lacinia dignissim venenatis.Mus arcu euismod ad hac dui, vivamus platea netus.Neque per nisl posuere sagittis, id platea dui.A enim magnis dapibus, nullam odio porta, nisl class.Turpis leo pellentesque per nam, nostra fringilla id.",
@@ -116,6 +124,7 @@ namespace BlazorDualCore.Shared.Data
                 },
                 new Job()
                 {
+                    Id = Guid.NewGuid(),
                     Employer = this._employerService.GetByName("Maretox Spectron"),
                     Name = "Graphics Designer Required Freelance",
                     Description = "Far much that one rank beheld bluebird after outside ignobly allegedly more when oh arrogantly vehement irresistibly fussy penguin insect additionally wow absolutely crud meretriciously hastily dalmatian a glowered inset one echidna cassowary some parrot and much as goodness some froze the sullen much connected bat wonderfully on instantaneously eel valiantly petted this along across highhandedly much dog out the much alas evasively neutral lazy reset. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque augue dignissim venenatis, turpis vestibulum lacinia dignissim venenatis.Mus arcu euismod ad hac dui, vivamus platea netus.Neque per nisl posuere sagittis, id platea dui.A enim magnis dapibus, nullam odio porta, nisl class.Turpis leo pellentesque per nam, nostra fringilla id.",
@@ -128,6 +137,7 @@ namespace BlazorDualCore.Shared.Data
                 },
                 new Job()
                 {
+                    Id = Guid.NewGuid(),
                     Employer = this._employerService.GetByName("Feverty Media"),
                     Name = "Need Senior Rolling Property Agent",
                     Description = "Far much that one rank beheld bluebird after outside ignobly allegedly more when oh arrogantly vehement irresistibly fussy penguin insect additionally wow absolutely crud meretriciously hastily dalmatian a glowered inset one echidna cassowary some parrot and much as goodness some froze the sullen much connected bat wonderfully on instantaneously eel valiantly petted this along across highhandedly much dog out the much alas evasively neutral lazy reset. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque augue dignissim venenatis, turpis vestibulum lacinia dignissim venenatis.Mus arcu euismod ad hac dui, vivamus platea netus.Neque per nisl posuere sagittis, id platea dui.A enim magnis dapibus, nullam odio porta, nisl class.Turpis leo pellentesque per nam, nostra fringilla id.",

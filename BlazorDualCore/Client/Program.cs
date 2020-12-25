@@ -21,6 +21,7 @@ namespace BlazorDualCore.Client
 
             services.AddScoped<BlazorDualCore.Shared.Data.WeatherForecastService>();
 
+            services.AddScoped<BlazorDualCore.Shared.Data.LocationService>();
             services.AddScoped<BlazorDualCore.Shared.Data.EmployeeService>();
             services.AddScoped<BlazorDualCore.Shared.Data.EmployerService>();
             services.AddScoped<BlazorDualCore.Shared.Data.JobService>();

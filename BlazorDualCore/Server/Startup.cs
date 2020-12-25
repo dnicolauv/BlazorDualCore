@@ -85,7 +85,7 @@ namespace BlazorDualCore.Server
             services.AddScoped<ClientLoader>();
             services.AddScoped<IClientLoaderConfiguration, ClientLoaderConfiguration>();
 
-
+            services.AddScoped<Shared.Data.LocationService>();
             services.AddScoped<Shared.Data.EmployeeService>();
             services.AddScoped<Shared.Data.EmployerService>();
             services.AddScoped<Shared.Data.JobService>();

@@ -1,9 +1,43 @@
 ﻿@page "/projects"
+@using BlazorDualCore.Shared
 
 <SidebarNav>
     <LeftSidebarContent>
-        <FilterBox  />
-        <FilterBox />
+        <div class="relative rounded-md shadow-sm">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <span class="text-gray-500 sm:text-sm">
+                    <svg class="h-5 w-5 text-gray-300 group-hover:text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </span>
+            </div>
+            @*<input type="text" name="search" id="search" class="bg-gray-100 bg-opacity-50 block border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 pl-10 pr-12 rounded-md w-full" placeholder="Job description" />*@
+            <Autocomplete ApiEndpoint="api/Job" TItem="Job" InputClass="bg-opacity-50 block border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 pl-10 pr-12 rounded-md w-full" Placeholder="Job Description">
+                <ItemTemplate Context="job">
+                    <AutocompleteAvatarTemplate ItemClicked="JobItemClicked" ImageUrl="@job.Employer?.LogoUrl" Key="@job.Id.ToString()" Name="@job.Name" />
+                </ItemTemplate>
+            </Autocomplete>
+        </div>
+
+        <div class="relative rounded-md shadow-sm">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <span class="text-gray-500 sm:text-sm">
+                    <svg class="h-5 w-5 text-gray-300 group-hover:text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </span>
+            </div>
+            @*<input type="text" name="search" id="search" class="bg-gray-100 bg-opacity-50 block border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 pl-10 pr-12 rounded-md w-full" placeholder="Location" />*@
+            <Autocomplete ApiEndpoint="api/Location" TItem="Location" InputClass="bg-opacity-50 block border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 pl-10 pr-12 rounded-md w-full" Placeholder="Location">
+                <ItemTemplate Context="location">
+                    <AutocompleteAvatarTemplate ItemClicked="LocationItemClicked" Key="@location.Id.ToString()" Name="@location.Name" />
+                </ItemTemplate>
+            </Autocomplete>
+        </div>
+
+        <FilterBox Type="checkbox" Title="Location" ApiEndpoint="api/Location" />
+        <FilterBox Type="radio" Title="Location" ApiEndpoint="api/Location" /> 
         <FilterBox />
     </LeftSidebarContent>
 
@@ -13,5 +47,13 @@
 </SidebarNav>
 
 @code {
+    private void JobItemClicked()
+    {
 
+    }
+
+    private void LocationItemClicked()
+    {
+
+    }
 }
